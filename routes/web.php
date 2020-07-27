@@ -19,9 +19,6 @@ Route::get('/', function () {
 */
 Auth::routes();
 
-Route::get('/', 'StudentController@index')->name('student');
-Route::post('/store', 'StudentController@store')->name('store');
-Route::post('/update/{id}', 'StudentController@show')->name('update');
 
-
+Route::resource('student', 'StudentController');
 
